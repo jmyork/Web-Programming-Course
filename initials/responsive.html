@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my  webPage</title>
+
+    <style>
+       h1{
+        text-align: center;
+        color: rgb(245, 53, 53);
+       }
+
+       #container{
+        display: flex;
+        width: 500px;
+        margin: 2px auto;
+        scroll-behavior: smooth;
+        overflow-x: scroll;
+        scroll-snap-type: none;
+       }
+       #container >div{
+        background-color: springgreen;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        width: 50px;
+        text-align: center;
+       }
+       #container > div:hover{
+        width: 200px;
+        height: 100px;
+        background-color: rgb(115, 162, 204);
+       }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my webPage</h1>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>

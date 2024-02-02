@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Details of the Flight</h1>
+    {% if error_message %}
+        <h2>Flight Not Found</h2>
+    {% else %}
+        <h1>{{ flight.id }}</h1>
+        <ul>
+            <li>origin: {{ flight.origin }}</li>
+            <li>duration: {{ flight.duration }}</li>
+            <li>destination: {{ flight.destination }}</li>
+        </ul>
+
+        <ul>
+            <h1>Passengers</h1>
+            {% if passengers %}
+                {% for passenger in passengers %}
+                    <li>{{passenger.firstName}}, {{passenger.lastName}}</li>
+                {% endfor %}
+            {% else %}
+                <h2>No Passenger</h2>
+            {% endif %}
+
+        </ul>
+        <h2>Add Passenger</h2>
+        <form action="{% url 'book' flight.id %}" method="POST">
+            {% csrf_token %}
+            <select name="passenger">
+            {% for nonpassenger in nonpassengers %}
+                <option value="{{ nonpassenger.id }}">{{nonpassenger.firstName}} {{nonpassenger.lastName}}</option>
+            {% endfor %}
+            </select>
+            <input type="submit" value="submit">
+        </form>
+    {% endif %}
+    <a href="{% url 'index' %}">Back To Flights</a>
+{% endblock %}

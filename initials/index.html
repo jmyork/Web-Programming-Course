@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading</title>
+
+
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 600px;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th{
+            background-color: rgb(84, 223, 242);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My HTML, This is A Title</h1>
+    <h2>Many Things Were Done Here</h2>
+    <a href="image.html">Go to see a cat</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Estilo</th>
+                <th>Top Hit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The Weeknd</td>
+                <td>PbRnb</td>
+                <td>All Songs</td>
+            </tr>
+            <tr>
+                <td>Toy Toy Trex</td>
+                <td>Rap</td>
+                <td>Jogo Sujo</td>
+            </tr>
+            <tr>
+                <td>Boss Proud</td>
+                <td>Rap</td>
+                <td>Dias Piores</td>
+            </tr>
+            <tr>
+                <td>Zara G</td>
+                <td>Trap</td>
+                <td>Minha Irmã</td>
+            </tr>
+            <tr>
+                <td>Gson</td>
+                <td>Rap</td>
+                <td>Aleluia</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <form action="POST" onsubmit="(e)=>e.preventDefault()">
+        <div>
+            <input type="text" name="name" id="name" placeholder="insert ur name">
+            <input type="text" name="lastname" id="lastname" placeholder="insert ur lastname">
+        </div>
+        <div>
+            <input type="password" name="password" id="password" placeholder="ur password">
+        </div>
+        <div>
+            Favorite Color
+            <input type="radio" name="color" value="red"> Red
+            <input type="radio" name="color" value="green"> Green
+            <input type="radio" name="color" value="light green"> Light Green
+            <input type="radio" name="color" value="powder blue"> Powder Blue
+            <input type="radio" name="color" value="ocean"> Ocean 
+        </div>
+
+        <div>
+            <input type="text" name="country-name" id="country-name" list="countries" placeholder="Country">
+            <datalist id="countries">
+                <option value="Afghanistan">
+                <option value="Pakistan">
+                <option value="Angola">
+                <option value="Uzbkistan">
+                <option value="Andorra">
+                <option value="Ganbia">
+                <option value="South Africa">
+                <option value="Mali">
+                <option value="Malasia">
+                <option value="Algeria">
+                <option value="Kongo">
+                <option value="Argentina">
+                <option value="Antigua">
+                <option value="Armenia">
+                <option value="Russia">
+                <option value="Austria">
+                <option value="Australia">
+                <option value="India">
+            </datalist>
+        </div>
+        <button type="submit">
+            save
+        </button>
+
+    </form>
+</body>
+
+</html>

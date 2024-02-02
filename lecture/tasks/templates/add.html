@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="{% url 'tasks:add' %}" method="POST">
+    {% csrf_token %}
+    <!-- <input type="search" name="query" id="query"> -->
+    {{form}}
+    <button>Add</button>
+</form>
+<a href="{% url 'tasks:index' %}">View List</a>
+{% endblock %}

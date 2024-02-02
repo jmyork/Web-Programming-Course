@@ -1,0 +1,14 @@
+h1 {
+    font-weight: bold;
+    font-size: 100px;
+}
+div.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+body{
+    overflow-y: hidden;
+}
